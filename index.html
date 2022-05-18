@@ -6,6 +6,7 @@
     <meta name="keywords" content="HTML & CSS & JAVASCRIPT">
     <meta name="author" content="NOURADDIN ADEN">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./CSS/main.css">
     <title>Ondeck</title>
 </head>
@@ -14,10 +15,44 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo"><a href="./index.html"><img src="./Assets/Logo.svg" alt="logo"></a></div>
+                <img class="open-menu" src="./Assets/Menu.svg" alt="Menu Image">
                 <nav>
                     <div class="nav-middle">
                         <ul class="unOrderList">
-                            <li class="item"><a class="link" href="#">products</a></li>
+                            <li class="item down"><a class="link" href="#">products <i class="fas fa-chevron-down"></i></a>
+                                <div class="pop-up">
+                                    <div class="close-menu">
+                                        <i class="fas fa-times close"></i>
+                                    </div>
+                                   <div class="pop-up-cards">
+                                        <div class="pop-up-image">
+                                            <img src="./Assets/Spense_Icon.svg" alt="Spense_Icon">
+                                        </div>
+                                       <div class="pop-up-desc">
+                                            <h3>Spense</h3>
+                                            <p>Spense is a landing page for writers. Great for <br> practicing absolute positioning and flex layouts.</p>
+                                       </div>
+                                   </div>
+                                    <div class="pop-up-cards">
+                                        <div class="pop-up-image">
+                                            <img src="./Assets/Fiber_Icon.svg" alt="Fiber_Icon">
+                                        </div>
+                                       <div class="pop-up-desc">
+                                            <h3>Fiber Landing Page</h3>
+                                            <p>An online portfolio generator. Great to practice <br> flex/grid layouts, and absolute positioning.</p>
+                                       </div>
+                                   </div>
+                                    <div class="pop-up-cards">
+                                        <div class="pop-up-image">
+                                            <img src="./Assets/Gradie_Icon.svg" alt="Gradie_Icon">
+                                        </div>
+                                       <div class="pop-up-desc">
+                                            <h3>Gradie Sign Up Page</h3>
+                                            <p>Gradie is a simple sign up page, great to <br> practice centering layouts.</p>
+                                       </div>
+                                   </div>
+                                </div>
+                            </li>
                             <li class="item"><a class="link" href="#">challenges</a></li>
                             <li class="item"><a class="link" href="#">resourcers</a></li>
                             <li class="item"><a class="link" href="#">other links</a></li>
@@ -26,7 +61,7 @@
                     <div class="btns mobile">
                         <ul>
                             <li class="item"><a class="link" href="#">sing in</a></li>
-                            <li class="item btn"><a class="link" href="#">sing up</a></li>
+                            <li class="item btn"><a class="link" href="#">try for free</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -66,7 +101,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-cards">
-                    <p>Trusted by 3+ million people at companies like</p>
+                    <p class="footer-desc">Trusted by 3+ million people at companies like</p>
                 </div>
                 <div class="footer-cards">
                     <img src="./Assets/Netflix Logo.svg" alt="Netflix Image">

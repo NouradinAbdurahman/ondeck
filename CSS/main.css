@@ -17,6 +17,13 @@ a {
     text-decoration: none;
     text-transform: capitalize;
 }
+.open-menu {
+    display: none;
+    cursor: pointer;
+}
+nav.active {
+    display: block;
+}
 /*---------Global---------------*/
 .container {
     max-width: 85%;
@@ -32,6 +39,11 @@ a {
 }
 .btns.mobile {
     display: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 .item {
     display: inline-block;
@@ -43,7 +55,12 @@ a {
     padding: 20px;
     color: #666;
 }
-.btns.desktop .item.btn {
+.item .link i {
+    font-size: 1rem;
+    margin-left: 7px;
+    vertical-align: bottom;
+}
+.btns.desktop .item.btn, .btns.mobile .item.btn  {
     background-color: rgb(1, 54, 1);
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -51,9 +68,52 @@ a {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-.btns.desktop .item.btn .link {
+.btns.desktop .item.btn .link, .btns.mobile .item.btn  {
     color: #fff;
     font-weight: bold;
+}
+.pop-up {
+    background-color: #fff;
+    padding: 30px;
+    position: absolute;
+    content: " ";
+    top: 10%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid transparent;
+    display: none;
+}
+.pop-up-cards {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+}
+.pop-up-cards h3, .pop-up-cards p {
+    margin-left: 10px;
+}
+.pop-up-cards h3 {
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: bold;
+}
+.pop-up-cards p {
+    font-size: 1.2rem;
+    padding: 8px 0;
+    color: #666;
+}
+.pop-up-cards img {
+    vertical-align: bottom;
+}
+.close-menu  {
+    text-align: end;
+}
+.close-menu i {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.pop-up.active {
+    display: block;
 }
 /*---------------/Header-------------*/
 /*--------------Hero-----------------*/
@@ -102,7 +162,7 @@ footer {
     display: flex;
     flex-direction: column;
 }
-.footer-cards p {
+.footer-dessc {
     font-size: 1.2rem;
     color: #666;
 }
@@ -110,3 +170,97 @@ footer {
     margin-top: 15px;
 }
 /*--------------/Footer---------------*/
+
+/*---------------Responsive-----------*/
+@media screen and (max-width: 768px){
+    .open-menu {
+        display: block;
+    }
+    nav {
+       display: none;
+       padding: 20px 0 ;
+       position: absolute;
+       content: " ";
+       top: 10%;
+       left: 0;
+       width: 100%;
+       background-color: antiquewhite;
+       z-index: 999;
+    }
+    .item {
+        display: block;
+        padding: 15px;
+        margin-left: 10px;
+    }
+    .btns.desktop {
+        display: none;
+    }
+    .btns.mobile {
+        display: block;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    .btns.mobile .item.btn {
+        width: 30%;
+    }
+    .hero-image {
+        display: none;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 767px){
+    .hero {
+        margin-top: 80px;
+    }
+    .container {
+        max-width: 90%;
+    }
+    .btns.mobile .item.btn {
+        width: 50%;
+    }
+    .btns.mobile .item.btn .link {
+        color: #fff;
+    }
+    .pop-up {
+        width: 100%;
+        background-color: #fff;
+        padding: 30px;
+        position: absolute;
+        content: " ";
+        top: 10%;
+        left: 0;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        border: 5px solid transparent;
+        display: none;
+    }
+    .hero-title {
+        font-size: 2.3rem;
+    }
+    .hero-desc {
+        font-size: 1.1rem;
+    }
+    .rate p {
+        font-size: 1rem;
+    }
+    .rate img {
+        padding: 0;
+    }
+    .footer-cards img {
+        width: 40%;
+    }
+    .footer-cards:nth-child(2) {
+        margin-top: 30px;
+    }
+    .footer-dessc {
+        font-size: 1rem;
+        color: #666;
+    }
+}    
+/*---------------/Responsive-----------*/
