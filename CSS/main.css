@@ -264,4 +264,29 @@ footer {
     }
 }    
 
+@media screen and (max-width: 767px) {
+    nav {
+        top: 15%;
+    }
+    .btns.mobile .item.btn {
+        width: 60%;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-desc {
+        font-size: .9rem;
+    }
+    .rate p {
+        font-size: .8rem;
+    }
+    .footer-dessc {
+        font-size: .2rem;
+        color: #666;
+    }
+    .pop-up-desc p {
+        font-size: .9rem;
+    }
+}
+
 /*---------------/Responsive-----------*/
